@@ -1,0 +1,13 @@
+1. git pull är när man hämtar ändringarna från den senaste commiten på github.
+Git push är när man skickar de ändringarna man gjort i sitt lokala repository till github.
+
+2. git log används för att se commit historiken medans git status visar de ändringar du gjort men inte commitat ännu.
+
+3. git branch låter oss göra ändringar utan att riskera att förstöra något i master branchen. Om man exempelvis har en bugg så kan man skapa en branch där man jobbar för att fixa buggen i en säker miljö 
+
+4. det finns olika sätt att ta  tillbaka de ändringar man gjort i git. En utav dessa är git reset. Git reset flyttar HEAD till den senaste commiten. Det finns 3 olika flaggor som ändar hur reset fungerar. Den första är --soft som låter oss ta tillbaka HEAD ett steg i historiken men lämnar de ändringar man gjort i staging arean. Flaggan --mixed är standard flaggan om man använder reset utan flagga och går tillbaka ett steg i historiken men istället för att lägga till de ändringar man gjort i staging area så läggs de till innan man gör git add. Flaggan --hard används för att gå tillbaka ett steg i historiken fast ta bort ALLA ändringar som gjorts. Reset är bra att använda om man committat något där man vet att man gjort fel och behöver ändra det utan att ta bort alla ändringar (om man exempelvis använder sig av --soft eller --mixed). 
+
+Git revert skiljer sig från git reset då man istället för att ändra i historiken så skapas det en ny commit som tar bort de ändringar som gjorts i den senaste committen. Revert kan användas i fall där man inte vill ändra historiken. Att ändra historiken är bra men kan lätt leda till problem om man exempelvis jobba med andra i ett shared repository på github.  
+
+
+
